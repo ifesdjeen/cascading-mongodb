@@ -63,9 +63,19 @@ you can use following code:
     tap))
 ```
 
-# Deploying required/missing artifacts:
+# Development
 
-Download hadoop-streaming assembly from Maven, and put it to your local maven repo:
+## Deploying required/missing artifacts:
+
+Get the latest `mongo-hadoop` from `git://github.com/mongodb/mongo-hadoop.git`,
+
+Within mongo-hadoop, run:
+
+```shell
+./sbt mongo-hadoop-streaming/assembly
+```
+
+And put resulting assembly to your local maven repo:
 
 ```shell
 mvn deploy:deploy-file -Dfile=./mongo-hadoop-streaming-assembly-1.1.0-SNAPSHOT.jar \
@@ -75,6 +85,12 @@ mvn deploy:deploy-file -Dfile=./mongo-hadoop-streaming-assembly-1.1.0-SNAPSHOT.j
                        -Dpackaging=jar
                        -DgeneratePom=true
                        -Durl=file:repo
+```
+
+## Run tests:
+
+```
+lein do javac, test
 ```
 
 # Dependency

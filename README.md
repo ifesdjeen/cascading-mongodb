@@ -5,6 +5,8 @@ with the latest version of Mongodb and Cascading (2.0), is tested,
 well-maintained. It's working fine for us, but use it at your own
 risk.
 
+Project was in part inspired by MongoDB Tap from @brugidou.
+
 # Usage
 
 To use it as both source and sink, simply create a Schema:
@@ -112,6 +114,7 @@ Jar is hosted on Clojars: https://clojars.org/com.clojurewerkz/cascading-mongodb
   <version>0.0.3</version>
 </dependency>
 ```
+
 # License
 
 Copyright (C) 2011-2012 Alex Petrov

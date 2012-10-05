@@ -8,7 +8,6 @@
                  [cascading/cascading-core "2.0.2"]
                  [cascading/cascading-hadoop "2.0.2"]
                  [log4j/log4j "1.2.17"]]
-  :main com.criteo.cascading.cascading-mongodb.core-test
   :java-source-paths ["src/main/java"]
   :test-paths        ["src/main/test"]
   :profiles {:dev {:resource-paths     ["src/resources"]

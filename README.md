@@ -102,7 +102,7 @@ Jar is hosted on Clojars: https://clojars.org/com.clojurewerkz/cascading-mongodb
 ## Leiningen
 
 ```clojure
-[com.clojurewerkz/cascading-mongodb "0.0.1-SNAPSHOT"]
+[com.clojurewerkz/cascading-mongodb "0.0.4"]
 ```
 
 ## Maven
@@ -111,7 +111,7 @@ Jar is hosted on Clojars: https://clojars.org/com.clojurewerkz/cascading-mongodb
 <dependency>
   <groupId>com.clojurewerkz</groupId>
   <artifactId>cascading-mongodb</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.4</version>
 </dependency>
 ```
 

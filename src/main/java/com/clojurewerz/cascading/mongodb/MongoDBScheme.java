@@ -65,6 +65,19 @@ public class MongoDBScheme extends Scheme<JobConf, RecordReader, OutputCollector
     this.collection = collection;
   }
 
+  public MongoDBScheme(String host, Integer port, String username, String password, String database, String collection, String keyColumnName, List<String> columnFieldNames, Map<String, String> fieldMappings) {
+    this.mongoUri = String.format("mongodb://%s:%s@%s:%d/%s.%s", username, password, host, port, database, collection);
+    this.pathUUID = UUID.randomUUID().toString();
+    this.columnFieldNames = columnFieldNames;
+    this.fieldMappings = fieldMappings;
+    this.keyColumnName = keyColumnName;
+
+    this.host = host;
+    this.port = port;
+    this.database = database;
+    this.collection = collection;
+  }
+
   /**
    *
    * @return
@@ -90,7 +103,7 @@ public class MongoDBScheme extends Scheme<JobConf, RecordReader, OutputCollector
   @Override
   public void sourceConfInit(FlowProcess<JobConf> process, Tap<JobConf, RecordReader, OutputCollector> tap, JobConf conf) {
     MongoConfigUtil.setReadSplitsFromShards(conf, true);
-    MongoConfigUtil.setInputURI( conf, this.mongoUri );
+    MongoConfigUtil.setInputURI( conf, new MongoURI(this.mongoUri) );
     FileInputFormat.setInputPaths(conf, this.getIdentifier());
     conf.setInputFormat(MongoInputFormat.class);
 

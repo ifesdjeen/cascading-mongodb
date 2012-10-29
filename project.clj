@@ -1,4 +1,4 @@
-(defproject com.clojurewerkz/cascading-mongodb "0.0.3"
+(defproject com.clojurewerkz/cascading-mongodb "0.0.4-SNAPSHOT"
   :description "Cascading MongoDB Tap"
   :url "http://github.com/ifesdjeen/cascading-mongodb"
   :min-lein-version "2.0.0"

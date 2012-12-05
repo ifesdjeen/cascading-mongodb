@@ -5,7 +5,7 @@
   :dependencies [[org.apache.hadoop/hadoop-core "0.20.2-cdh3u3"]
                  [org.mongodb/mongo-hadoop-streaming "1.1.0-SNAPSHOT"]
                  ;; [mongo-hadoop-streaming_cdh3u3  "1.0.0-rc0"]
-                 [org.mongodb/mongo-hadoop-core_cdh3u3 "1.0.0-rc0"]
+                 [org.mongodb/mongo-hadoop-core_cdh3u3 "1.0.0"]
                  [cascading/cascading-core "2.0.2"]
                  [cascading/cascading-hadoop "2.0.2"]
                  [log4j/log4j "1.2.17"]]
@@ -13,7 +13,7 @@
   :test-paths        ["src/main/test"]
   :profiles {:dev {:resource-paths     ["src/resources"]
                    :dependencies [[org.clojure/clojure "1.4.0"]
-		   		  [com.novemberain/monger "1.2.0"]
+                                  [com.novemberain/monger "1.2.0"]
                                   [cascalog "1.10.0"]
                                   [midje "1.3.0" :exclude [org.clojure/clojure]]
                                   [midje-cascalog "0.4.0" :exclude [org.clojure/clojure]]]}}

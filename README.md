@@ -1,5 +1,8 @@
 # Cascading Tap for Mongodb
 
+__WARNING__ This project is not properly maintained for about a year.
+If you'd like to take over, ping me (alex@clojurewerkz.org)
+
 This is a Mongodb Tap that can be used as a sink and source. Works
 with the latest version of Mongodb and Cascading (2.0), is tested,
 well-maintained. It's working fine for us, but use it at your own

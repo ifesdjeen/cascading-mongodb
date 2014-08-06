@@ -192,7 +192,7 @@ public class MongoDBScheme extends Scheme<JobConf, RecordReader, OutputCollector
       Object tupleEntryValue = null;
 
       try {
-        tupleEntryValue = tupleEntry.get(columnFieldMapping);
+        tupleEntryValue = tupleEntry.getObject(columnFieldMapping);
       } catch(FieldsResolverException e) {
         logger.error("Couldn't resolve field: {}", columnFieldName);
       }

@@ -122,6 +122,9 @@ public class MongoDBScheme extends Scheme<JobConf, RecordReader, OutputCollector
   public void sinkConfInit(FlowProcess<JobConf> process, Tap<JobConf, RecordReader, OutputCollector> tap,
                            JobConf conf) {
     conf.setOutputFormat(MongoOutputFormat.class);
+    // Disable speculative execution, to avoid writing duplicate data to mongodb
+    conf.setBoolean("mapred.map.tasks.speculative.execution", false);
+    conf.setBoolean("mapred.reduce.tasks.speculative.execution", false);
     MongoConfigUtil.setOutputURI(conf, this.mongoUri);
 
     FileOutputFormat.setOutputPath(conf, getPath());
